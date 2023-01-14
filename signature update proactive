@@ -1,4 +1,17 @@
-#Two scripts in one, please fix your self to fit into proactive remidation
+<# 
+Desc:
+Two scripts in one, please fix your self to fit into proactive remidation
+Update Sec signature and enable ASR  - Not tested
+
+Build for Proactive Remediation
+
+Detects if, signature version is greater than or equal to "1.381.2164.0" or if DefenderSignaturesOutOfDate is equals false.
+If complaint = enable effected ASR rule
+
+if not complaint begin updating signature with "Update-MpSignature" and ensure that the signature is now updated before we enable effected ASR rule to block (enable)
+
+end of desc.
+#>
 
 
 #Detection script
