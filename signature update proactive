@@ -10,6 +10,7 @@ $Defenderversion = $Defenderstatus.AntispywareSignatureVersion
 Try {
     If ($Defenderoutofdate -eq $false -or $Defenderversion -ge "1.381.2164.0"){
         Write-Output "Compliant, lets enable bugged ASR rule"
+        Set-MpPreference -AttackSurfaceReductionRules_Ids 92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b -AttackSurfaceReductionRules_Actions Enabled
         Exit 0
     } 
     Write-Warning "Not Compliant, lets update"
