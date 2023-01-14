@@ -20,6 +20,7 @@ $Defenderstatus = Get-MpComputerStatus
 $Defenderoutofdate = $Defenderstatus.DefenderSignaturesOutOfDate
 $Defenderversion = [Version]$Defenderstatus.AntispywareSignatureVersion
 
+#version to beat or be equal to
 $versiontobeat = [Version]'1.370.2164.0'
 
 Try {
@@ -47,6 +48,7 @@ $Defenderstatus = Get-MpComputerStatus
 $Defenderoutofdate = $Defenderstatus.DefenderSignaturesOutOfDate
 $Defenderversion = [Version]$Defenderstatus.AntispywareSignatureVersion
 
+#version to beat or be equal to
 $versiontobeat = [Verison]'1.370.2164.0'
 
 If ($Defenderoutofdate -eq $false -or $Defenderversion -ge "1.381.2164.0"){
